@@ -11,5 +11,9 @@
     [id]="'content_' + indexCard"
     cols="30"
     rows="10"
+    [(ngModel)]="textContent"
   ></textarea>
+  <ng-container *ngIf="textContent">
+    <input type="button" value="" (click)="textContent = ''" />
+  </ng-container>
 </article>

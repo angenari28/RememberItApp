@@ -1,3 +1,13 @@
+@inputTransitionDuration: 3000ms;
+@inputTransitionTF: cubic-bezier(0.645, 0.045, 0.355, 1);
+@labelDefaultPosY: 50%;
+
+
+@keyframes openCard {
+  from {width: 0; height: 0; }
+  to {width: 20em; height: 22em;}
+}
+
 :host article {
   width: 20em;
   height: 22em;
@@ -5,7 +15,10 @@
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 1em;
+  justify-content: center;
+  padding-bottom: 2em;
+  animation-name: openCard;
+  animation-duration: .2s;
 
   *:not(span) {
     margin: 0 2em 0 2em;
@@ -56,4 +69,16 @@
     outline: none;
     background: transparent;
   }
+
+  input[type="button"] {
+  margin-top: .5em;
+  cursor: pointer;
+    background: url('../../../assets/img/red-trash-can-icon.svg') no-repeat;
+    background-size: 1.1cap;
+  }
+}
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
 }
