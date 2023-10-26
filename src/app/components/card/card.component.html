@@ -1,0 +1,15 @@
+<article>
+  <span (click)="removeCallback(indexCard)"></span>
+  <input
+    type="text"
+    [id]="indexCard"
+    [placeholder]="'new card ' + (indexCard + 1)"
+    maxlength="18"
+  />
+  <textarea
+    name="content"
+    [id]="'content_' + indexCard"
+    cols="30"
+    rows="10"
+  ></textarea>
+</article>

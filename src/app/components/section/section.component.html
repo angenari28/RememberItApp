@@ -1,0 +1,8 @@
+<section>
+  <div class="card">
+    <ng-container *ngFor="let card of cardList; let index = index;">
+      <ri-card [indexCard]="index" [removeCallback]="removeCardCallback"></ri-card>
+    </ng-container>
+    <button type="button" (click)="addCard()">+</button>
+  </div>
+</section>

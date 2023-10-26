@@ -1,0 +1,59 @@
+:host article {
+  width: 20em;
+  height: 22em;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1em;
+
+  *:not(span) {
+    margin: 0 2em 0 2em;
+  }
+
+  > span {
+    text-align: end;
+    &:after {
+      margin: 0 0.5em 0 0;
+      content: "x";
+      font-size: 20px;
+      color: rgb(255, 127, 80);
+    }
+    &:hover {
+      scale: 1;
+      opacity: 1;
+      transform: translate(0, 0);
+      transition-delay: 0.4s;
+      cursor: pointer;
+    }
+  }
+
+  input {
+    outline: none;
+    border: none;
+    font-size: 2cap;
+    font-weight: 200;
+    color: rgba(127, 255, 0, 1);
+    background: transparent;
+    &::placeholder {
+      color: rgba(127, 255, 0, 0.2);
+      opacity: 1;
+    }
+    &:focus::placeholder {
+      color: transparent;
+    }
+  }
+
+  textarea {
+    resize: none;
+    margin-top: 2em;
+    padding: 1em;
+    height: 70%;
+    border: none;
+    color: rgb(255, 127, 80);
+    font-size: 2cap;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    outline: none;
+    background: transparent;
+  }
+}
