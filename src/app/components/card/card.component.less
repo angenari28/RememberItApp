@@ -11,7 +11,7 @@
 :host article {
   width: 20em;
   height: 22em;
-  background: rgba(0, 0, 0, 0.1);
+  background: var(--background-secundary);
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@
       margin: 0 0.5em 0 0;
       content: "x";
       font-size: 20px;
-      color: rgb(255, 127, 80);
+      color: var(--color-secundary);
     }
     &:hover {
       scale: 1;
@@ -46,10 +46,10 @@
     border: none;
     font-size: 2cap;
     font-weight: 200;
-    color: rgba(127, 255, 0, 1);
+    color: var(--color-secundary);
     background: transparent;
     &::placeholder {
-      color: rgba(127, 255, 0, 0.2);
+      color: var(--color-secundary-opacity);
       opacity: 1;
     }
     &:focus::placeholder {
@@ -63,7 +63,7 @@
     padding: 1em;
     height: 70%;
     border: none;
-    color: rgb(255, 127, 80);
+    color: var(--color-primary);
     font-size: 2cap;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     outline: none;

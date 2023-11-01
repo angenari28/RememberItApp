@@ -1,7 +1,13 @@
 <section>
   <div class="card">
-    <ng-container *ngFor="let card of cardList; let index = index;">
-      <ri-card [indexCard]="index" [removeCallback]="removeCardCallback"></ri-card>
+    <ng-container *ngIf="cards.length > 0">
+      <ng-container *ngFor="let card of cards">
+        <ri-card
+          [cardContent]="card"
+          [removeCallback]="removeCardCallback"
+          [textCallback]="textCardCallback"
+        ></ri-card>
+      </ng-container>
     </ng-container>
     <button type="button" (click)="addCard()">+</button>
   </div>

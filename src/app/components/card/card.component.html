@@ -1,19 +1,19 @@
 <article>
-  <span (click)="removeCallback(indexCard)"></span>
+  <span (click)="removeCallback(cardContent.id)"></span>
   <input
     type="text"
-    [id]="indexCard"
-    [placeholder]="'new card ' + (indexCard + 1)"
+    [id]="cardContent.id"
+    [placeholder]="'new card'"
     maxlength="18"
   />
   <textarea
     name="content"
-    [id]="'content_' + indexCard"
+    [id]="'content_' + cardContent.id"
     cols="30"
     rows="10"
-    [(ngModel)]="textContent"
+    [formControl]="textContent"
   ></textarea>
-  <ng-container *ngIf="textContent">
-    <input type="button" value="" (click)="textContent = ''" />
+  <ng-container *ngIf="textContent.value">
+    <input type="button" value="" (click)="textContent.setValue('')" />
   </ng-container>
 </article>
