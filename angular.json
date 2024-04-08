@@ -71,10 +71,10 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "RememberItApp:build:production"
+              "buildTarget": "RememberItApp:build:production"
             },
             "development": {
-              "browserTarget": "RememberItApp:build:development"
+              "buildTarget": "RememberItApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "RememberItApp:build"
+            "buildTarget": "RememberItApp:build"
           }
         },
         "test": {

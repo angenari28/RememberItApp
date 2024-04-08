@@ -43,12 +43,12 @@ export class SectionComponent implements OnInit {
 
   protected removeCard(index: number): void {
     this.cards.splice(index, 1);
-    this.dbService.removeElement('postsStore', index.toString());
+    this.dbService.removeElement('postsStore', index);
   }
 
   protected saveText(text: string, index: number): void {
     from(
-      this.dbService.getElement<CardContent>('postsStore', index.toString())
+      this.dbService.getElement<CardContent>('postsStore', index)
     ).subscribe({
       next: (res) => {
         if (!res)
@@ -57,7 +57,7 @@ export class SectionComponent implements OnInit {
             id: index,
           } as CardContent);
         else
-          this.dbService.editElement('postsStore', index.toString(), {
+          this.dbService.editElement('postsStore', index, {
             text,
             id: index,
           } as CardContent);

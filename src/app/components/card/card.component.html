@@ -13,7 +13,7 @@
     rows="10"
     [formControl]="textContent"
   ></textarea>
-  <ng-container *ngIf="textContent.value">
-    <input type="button" value="" (click)="textContent.setValue('')" />
-  </ng-container>
+  @if(textContent.value) {
+  <input type="button" value="" (click)="textContent.setValue('')" />
+  }
 </article>

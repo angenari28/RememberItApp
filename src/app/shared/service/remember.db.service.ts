@@ -26,7 +26,7 @@ export class RememberDbService {
     return this.db;
 }
 
-  public getElement = <T>(store: string, key: string) => {
+  public getElement = <T>(store: string, key: number | 'all') => {
       const open = indexedDB.open(this.catalog);
       return new Promise<T>((resolve, reject) => {
           open.onsuccess = () => {
@@ -64,7 +64,7 @@ export class RememberDbService {
       };
   };
 
-  public editElement = <T>(store: string, key: string, payload: object) => {
+  public editElement = <T>(store: string, key: number | 'all', payload: object) => {
       const open = indexedDB.open(this.catalog);
       return new Promise<T>((resolve, reject) => {
           open.onsuccess = () => {
@@ -89,7 +89,7 @@ export class RememberDbService {
       });
   };
 
-  public removeElement = (store: string, key: string) => {
+  public removeElement = (store: string, key: number | 'all') => {
       const open = indexedDB.open(this.catalog);
       open.onsuccess = () => {
           let request: IDBRequest;
